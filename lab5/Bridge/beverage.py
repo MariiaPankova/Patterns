@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod, abstractproperty
+from abc import ABC, abstractmethod
 
 class Beverage(ABC):
     def __init__(self, sugar: int, supplement, water_volume: int, serving):
@@ -20,6 +20,6 @@ class Beverage(ABC):
     def drink(self):
         pass
 
-    @abstractproperty
+    @abstractmethod
     def cost(self):
         pass
