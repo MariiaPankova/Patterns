@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Iterator:
+class Iterator(ABC):
     @abstractmethod
     def __next__(self):
         pass
@@ -10,7 +10,7 @@ class Iterator:
         pass
 
 
-class EmployeeIterator:
+class EmployeeIterator(Iterator):
     def __init__(self, employee_list):
         self.collection = employee_list
         self.iteration_state = 0
